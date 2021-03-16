@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -7,10 +7,16 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'blog-project';
 
-  constructor(public router:Router){
-    
+  constructor(private router:Router){
   }
+   
+
+
+ngOnInit(){
+  console.log(this.router)
+}
+
 }
